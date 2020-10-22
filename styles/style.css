@@ -21,23 +21,48 @@
 
 .container {
     width: 1135px;
+    margin: 0 auto;
 }
 
 
-.movie-grid { 
+
+.movies{
+    margin: 30px 0;
+}
+
+
+.movies-grid { 
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    text-align: left;
+    font-size: 48px;
+    color: #fff;
 }
 .card { 
-    width: 190px;
-    height: 190px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+.card-image{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
 }
 .card-double{
-    width: 435px;
-    height: 190px;
+    grid-column: span 2;
+    width: 430px;
+    height: 200px;
 }
 .card-detail{
-    width: 190px;
-    height: 435px;
+    grid-row: span 2;
+    width: 200px;
+    height: 430px;
 }
 .details {
     display: none;
@@ -48,6 +73,12 @@
 .time-bar {
     display: none;
 }
+.title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+ }
 .likes {}
 .comments { }
 .downloads { }
@@ -55,4 +86,3 @@
 .rel-date { }
 .btn { }
 .time-bar__bar { }
-.title { }
