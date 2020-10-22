@@ -1,0 +1,58 @@
+@font-face{
+    font-family: AdobeGothic;
+    src: url("../fonts/AdobeGothicStd-Bold.otf");
+    font-weight: bold;
+}
+@font-face{
+    font-family: Calibri;
+    src: url("../fonts/calibri.ttf");
+}
+@font-face{
+    font-family: Calibri;
+    src: url("../fonts/calibrib.ttf");
+    font-weight: bold;
+}
+@font-face{
+    font-family: Calibri;
+    src: url("../fonts/calibrii.ttf");
+    font-style: italic;
+}
+
+
+.container {
+    width: 1135px;
+}
+
+
+.movie-grid { 
+    display: grid;
+}
+.card { 
+    width: 190px;
+    height: 190px;
+}
+.card-double{
+    width: 435px;
+    height: 190px;
+}
+.card-detail{
+    width: 190px;
+    height: 435px;
+}
+.details {
+    display: none;
+}
+.info {
+    display: none;
+}
+.time-bar {
+    display: none;
+}
+.likes {}
+.comments { }
+.downloads { }
+.rating { }
+.rel-date { }
+.btn { }
+.time-bar__bar { }
+.title { }
