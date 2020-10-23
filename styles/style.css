@@ -36,18 +36,25 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
     text-align: left;
-    font-size: 48px;
+    font-size: 30px;
     color: #fff;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: #000;
 }
-.card { 
+.card {
     position: relative;
     width: 200px;
     height: 200px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: none;
+}
+
+
+.card .info{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
 }
 
 .card::after{
