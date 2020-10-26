@@ -23,13 +23,22 @@
     max-width: 1135px;
     margin: 0 auto;
 }
-
-
+i{
+    transition: color 0.2s ease;
+}
 
 .movies{
     margin: 30px 0;
 }
 
+.fas, .far{
+    font-size: 16px;
+    color: red;
+    font-weight: 600;
+}
+.far.fa-star{
+    color: black;
+}
 
 .movies-grid { 
     display: grid;
@@ -37,8 +46,10 @@
     grid-auto-flow: dense;
     grid-gap: 15px;
     text-align: left;
-    font-size: 16px;
-    color:yellow;
+    font-size: 14px;
+    font-family: AdobeGothic;
+    font-weight: bold;
+    color: white;
 }
 .card {
     display: block;
@@ -61,7 +72,7 @@
     z-index: 2;
 }
 .card-detail .card-container{
-    top: -395px;
+    top: -385px;
 }
 
 .card .info{
@@ -73,9 +84,7 @@
     top: 0;
     width: 100%;
 }
-.likes:hover{
-    color: red;
-}
+
 .downloads::after{
     content: '';
     transform: scale(0);
@@ -92,6 +101,18 @@
 
 .card:hover .downloads::after{
     transform: scale(1);
+}
+.info .fa-download{
+    color: white;
+}
+.bg{
+    overflow: hidden;
+}
+.bg, .card-image{
+    transition: all 0.4s ease;
+}
+.card:hover .card-image, .card:hover .bg::after{
+    transform: scale(1.15);
 }
 
 .card::after{
@@ -137,11 +158,11 @@
     right: 0;
     bottom: 0;
     background-color: #3f444e;
-    opacity: 0.4;
+    opacity: 0.6;
     transition: all 0.3s ease-in-out;
 }
 .card-detail .bg::after{
-    opacity: 0.7;
+    opacity: 0.8;
     top: 165px;
     transition: all 0.3s ease-in-out;
 }
@@ -160,9 +181,30 @@
     grid-row: span 2;
     width: 200px;
     height: 415px;
+    padding: 15px;
+}
+.card-detail .details{
+    display: flex;
+    flex-direction: column;
+
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+}
+.card-detail .info{
+    display: none;
 }
 .details {
     display: none;
+    color: black;
+}
+.details div{    
+    margin: 0 0 14px;
+    transition: all 0.3s ease;
+}
+.card:hover .details div{
+    margin: 0 0 7px;
 }
 .info {
     display: none;
