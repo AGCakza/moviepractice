@@ -1,0 +1,341 @@
+@font-face{
+    font-family: AdobeGothic;
+    src: url("../fonts/AdobeGothicStd-Bold.otf");
+    font-weight: bold;
+}
+@font-face{
+    font-family: Calibri;
+    src: url("../fonts/calibri.ttf");
+}
+@font-face{
+    font-family: Calibri;
+    src: url("../fonts/calibrib.ttf");
+    font-weight: bold;
+}
+@font-face{
+    font-family: Calibri;
+    src: url("../fonts/calibrii.ttf");
+    font-style: italic;
+}
+
+i{
+    transition: color 0.2s ease;
+}
+header{
+    margin: 30px;
+}
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar{
+    background: #2f3640;
+    height: 50px;
+    border-radius: 40px;
+    padding: 0 10px;
+}
+
+.search-bar:hover .search-input {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-bar:hover .search-btn{
+ background: white;
+ color: black;
+}
+
+
+.search-btn{
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.search-btn{
+    font-size: 30px;
+}
+
+.search-input{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-out;
+    line-height: 50px;
+    width: 0px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.movies{
+    margin: 30px 0;
+}
+
+.fas, .far{
+    font-size: 16px;
+    color: red;
+    font-weight: 600;
+}
+.far.fa-star{
+    color: black;
+}
+
+.movies-grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-auto-flow: dense;
+    grid-gap: 15px;
+    text-align: left;
+    font-size: 13px;
+    font-family: AdobeGothic;
+    font-weight: bold;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: none;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.card-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -170px;
+    left: 0;
+    z-index: 2;
+}
+.card-detail .card-container{
+    top: -385px;
+}
+
+.card .info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.downloads::after{
+    content: '';
+    transform: scale(0);
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: red;
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover .downloads::after{
+    transform: scale(1);
+}
+.info .fa-download{
+    color: white;
+}
+.bg{
+    overflow: hidden;
+}
+.bg, .card-image{
+    transition: all 0.4s ease;
+}
+.card:hover .card-image, .card:hover .bg::after{
+    transform: scale(1.15);
+}
+
+.card::after{
+    position: absolute;
+    content: '';
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.card:hover::after{    
+    box-shadow: inset 0 0 0 5px red;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+}
+.card-image{
+    padding: 0;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.card-detail .card-image{
+    object-fit: cover;
+    bottom: -165px;
+}
+
+.bg::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3f444e;
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+.card-detail .bg::after{
+    opacity: 0.8;
+    top: 165px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .bg::after{
+    opacity: 0;
+}
+
+
+.card-double{
+    grid-column: span 2;
+    width: 415px;
+    height: 200px;
+}
+.card-detail{
+    grid-row: span 2;
+    width: 200px;
+    height: 415px;
+    padding: 15px;
+}
+.card-detail .details{
+    display: flex;
+    flex-direction: column;
+
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+}
+.card-detail .info{
+    display: none;
+}
+.details {
+    display: none;
+    color: black;
+}
+.details div{    
+    margin: 0 0 14px;
+    transition: all 0.3s ease;
+}
+.card:hover .details div{
+    margin: 0 0 7px;
+}
+.info {
+    display: none;
+}
+.time-bar {
+    display: none;
+}
+.title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+ }
+.likes {}
+.comments { }
+.downloads { }
+.rating { }
+.rel-date { }
+.btn { }
+.time-bar__bar { }
+
+
+
+@media(max-width: 630px){
+    .movies-grid { 
+        grid-template-columns: repeat(auto-fill, 150px);
+        grid-gap: 10px;
+    }
+
+    .card{
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+    }
+
+    .card-detail{
+        width: 150px;
+        height: 310px;
+    }
+
+    .card-double{
+        width: 310px;
+        height: 150px;
+    }
+    .card-container{
+        top: -130px;
+    }
+    .card-detail .card-container{
+        top: -290px;
+    }
+    .details div{    
+        margin: 0 0 16px;
+    }
+    .card:hover .details div{
+        margin: 0 0 10px;
+    }
+    .card:hover::after{    
+        box-shadow: inset 0 0 0 3px red;
+    }
+    .fas, .far{
+        font-size: 14px;
+    }
+}
