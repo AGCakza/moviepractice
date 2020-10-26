@@ -146,7 +146,7 @@ header .container{
     top: -385px;
 }
 
-.card .info{
+.info{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -276,9 +276,6 @@ header .container{
 }
 .card:hover .details div{
     margin: 0 0 7px;
-}
-.info {
-    display: none;
 }
 .time-bar {
     display: none;
