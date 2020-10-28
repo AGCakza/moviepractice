@@ -1,77 +1,70 @@
 .nav-div .container{
     display: flex;
+    align-items: center;
+    height: 75px;
     justify-content: space-between;
+}
+
+.nav-bar ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px;
 }
 
 .nav-link{
     position: relative;
-    width: 30px;
+    width: 100%;
     display:inline-block;
-    margin-left: 15px; 
 }
 
+.fa-stack { 
+    font-size: 14px; 
+}
 .nav-link i{
-    font-size: 30px;
-    position: relative;
-    color: darkgray;
+    vertical-align: middle; 
+    color: #9b9ea3;
 }
-.lines{
-    font-size: 10px;
+.fa-stack-1x, .nav-link .fa-stack-1x{
+    transition: all 0.3s ease-out;
+    color: #3f444e;
 }
-.lines::before{
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 11px;
-    height: 3px;
-    width: 7px;
-    border-radius: 100px;
-    transition: all 0.2s ease-out;
-    background-color: gray;
+.nav-list:hover .fa-stack-2x{
+    color:#3f444e;
 }
-.lines::after{
-    content: '';
-    position: absolute;
-    top: 15px;
-    left: 11px;
-    height: 3px;
-    width: 10px;
-    border-radius: 100px;
-    transition: all 0.2s ease-out;
-    background-color: gray;
-}
-.nav-link:hover .lines::before, .nav-link:hover .lines::after{
-    background-color: red;
-}
-
-.nav-list{
-    text-align:center;
+.nav-list:hover .fa-stack-1x{
+    color: red;
 }
 
 
-.nav-link::before{
+
+.ddown-triang{
     position: absolute;
     content: '';
-    top: 17px;
-    left: 50%;
-    border: 5px solid transparent; border-bottom: 8px solid red;
+    top: 24px;
+    border: 3px solid transparent; border-bottom: 3px solid red;
     transition: all 0.3s ease-out;
     opacity: 0;
     z-index: 1;
 }
-.nav-link::after{
+.ddown{
     text-transform: uppercase;
     font-size: 10px;
+    padding:0 10px;
+    line-height: 20px;
     font-family: AdobeGothic;
     color: white;
-    padding: 5px;
-    text-align: center;
-    display: hidden;
-    content: 'Comments';
+    display: inline-block;
+    visibility: hidden;
     position: absolute;
     top: 30px;
-    left: 0;
-    height: 25px;
+    height: 20px;
     background-color: red;
     transition: all 0.3s ease-out;
     opacity: 0;
@@ -79,15 +72,16 @@
     border-radius: 5px;
 }
 
-.nav-link:hover::after, .nav-link:hover::before{
-    display: inline-block;
+.nav-list:hover .ddown-triang, .nav-list:hover .ddown{
+    visibility: visible;
     transform: translateY(5px);
     opacity: 1;
 }
 
-.logo{
+.logo a{
     display: flex;
     align-items: center;
+    color: #3f444e;
 }
 
 .logo img{
@@ -98,4 +92,12 @@
 .logo_txt{
     font-family: AdobeGothic;
     font-size: 30px;
+}
+
+
+
+
+.gallery{
+    height: 500px;
+    background-color: #9b9ea3;
 }
