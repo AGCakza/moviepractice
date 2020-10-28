@@ -1,22 +1,4 @@
-@font-face{
-    font-family: AdobeGothic;
-    src: url("../fonts/AdobeGothicStd-Bold.otf");
-    font-weight: bold;
-}
-@font-face{
-    font-family: Calibri;
-    src: url("../fonts/calibri.ttf");
-}
-@font-face{
-    font-family: Calibri;
-    src: url("../fonts/calibrib.ttf");
-    font-weight: bold;
-}
-@font-face{
-    font-family: Calibri;
-    src: url("../fonts/calibrii.ttf");
-    font-style: italic;
-}
+
 
 i{
     transition: color 0.2s ease;
